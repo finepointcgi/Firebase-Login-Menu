@@ -1,0 +1,109 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://LoginController.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UserName" type="LineEdit" parent="."]
+margin_left = 79.0317
+margin_top = 93.0873
+margin_right = 240.032
+margin_bottom = 117.087
+
+[node name="Password" type="LineEdit" parent="."]
+margin_left = 278.603
+margin_top = 93.0873
+margin_right = 439.603
+margin_bottom = 117.087
+secret = true
+
+[node name="Email tag" type="Label" parent="."]
+margin_left = 93.0
+margin_top = 65.0
+margin_right = 221.0
+margin_bottom = 83.0
+text = "Email"
+
+[node name="Password tag" type="Label" parent="."]
+margin_left = 293.0
+margin_top = 62.0
+margin_right = 421.0
+margin_bottom = 80.0
+text = "Password"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Login" type="Button" parent="."]
+margin_left = 284.238
+margin_top = 128.008
+margin_right = 423.238
+margin_bottom = 148.008
+text = "Login"
+
+[node name="Register" type="Button" parent="."]
+margin_left = 85.0
+margin_top = 132.0
+margin_right = 235.0
+margin_bottom = 152.0
+text = "Register"
+
+[node name="ForgotPassword" type="Button" parent="."]
+margin_left = 294.27
+margin_top = 166.992
+margin_right = 442.27
+margin_bottom = 186.992
+text = "Forgot Password?"
+
+[node name="GetScores" type="Button" parent="."]
+margin_left = 725.715
+margin_top = 87.6905
+margin_right = 867.715
+margin_bottom = 107.691
+text = "Get Scores"
+
+[node name="UpdateScore" type="Button" parent="."]
+margin_left = 705.556
+margin_top = 141.111
+margin_right = 885.556
+margin_bottom = 161.111
+text = "Update Score"
+
+[node name="GetTopScores" type="Button" parent="."]
+margin_left = 715.0
+margin_top = 191.0
+margin_right = 897.0
+margin_bottom = 211.0
+text = "Get Top 3 Scores"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DeleteRecord" type="Button" parent="."]
+margin_left = 716.079
+margin_top = 228.976
+margin_right = 893.079
+margin_bottom = 248.976
+text = "Delete Record"
+
+[node name="RemoveUser" type="Button" parent="."]
+margin_left = 293.063
+margin_top = 208.96
+margin_right = 436.063
+margin_bottom = 228.96
+text = "Remove User"
+
+[connection signal="button_up" from="Login" to="." method="_on_Login_button_up"]
+[connection signal="button_up" from="Register" to="." method="_on_Register_button_up"]
+[connection signal="button_up" from="ForgotPassword" to="." method="_on_ForgotPassword_button_up"]
+[connection signal="button_up" from="GetScores" to="." method="_on_GetScores_button_up"]
+[connection signal="button_up" from="UpdateScore" to="." method="_on_UpdateScore_button_up"]
+[connection signal="button_up" from="GetTopScores" to="." method="_on_GetTopScores_button_up"]
+[connection signal="button_up" from="DeleteRecord" to="." method="_on_DeleteRecord_button_up"]
+[connection signal="button_up" from="RemoveUser" to="." method="_on_RemoveUser_button_up"]

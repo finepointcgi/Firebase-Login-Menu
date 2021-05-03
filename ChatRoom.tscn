@@ -1,0 +1,65 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ChatBoxManager.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HostRoom" type="Button" parent="."]
+margin_left = 25.1984
+margin_top = 15.119
+margin_right = 163.198
+margin_bottom = 35.119
+text = "Host Room"
+
+[node name="JoinRoom" type="Button" parent="."]
+margin_left = 26.2063
+margin_top = 53.4206
+margin_right = 164.206
+margin_bottom = 73.4206
+text = "Join Room"
+
+[node name="Leave" type="Button" parent="."]
+margin_left = 26.2063
+margin_top = 140.103
+margin_right = 164.206
+margin_bottom = 160.103
+text = "Leave"
+
+[node name="IpAddress" type="LineEdit" parent="."]
+margin_left = 26.2063
+margin_top = 90.7143
+margin_right = 185.206
+margin_bottom = 114.714
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 327.0
+margin_top = 51.0
+margin_right = 735.0
+margin_bottom = 390.0
+
+[node name="ChatInput" type="LineEdit" parent="Panel"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 7.0
+margin_top = -28.0
+margin_right = -6.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChatBox" type="TextEdit" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -39.0
+
+[connection signal="button_up" from="HostRoom" to="." method="_on_HostRoom_button_up"]
+[connection signal="button_up" from="JoinRoom" to="." method="_on_JoinRoom_button_up"]
+[connection signal="button_up" from="Leave" to="." method="_on_Leave_button_up"]
